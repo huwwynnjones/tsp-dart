@@ -19,4 +19,19 @@ void main() {
     ];
     expect(journeyToCityPairs(journey), correctResult);
   });
+
+  test('calculate cost', () {
+    final costs = {CityKey('A', 'B'): 50, CityKey('B', 'C'): 30};
+    final cityPairs = [
+      ['A', 'B'],
+      ['B', 'C']
+    ];
+    expect(calculateCost(cityPairs, costs), 80);
+  });
+
+  test('factorial', () {
+    expect(factorial(1), 1);
+    expect(factorial(0), 1);
+    expect(factorial(5), 120);
+  });
 }

@@ -32,3 +32,21 @@ List<List<String>> journeyToCityPairs(List<String> journey) {
   }
   return cityPairs;
 }
+
+int calculateCost(List<List<String>> cityPairs, Map<CityKey, int> costs) {
+  return cityPairs.fold(0, (int cost, pair) {
+    final key = CityKey.from(pair);
+    if (costs.containsKey(key)) {
+      return cost + costs[key]!;
+    } else if (costs.containsKey(key.reverseKey())) {
+      return cost + costs[key.reverseKey()]!;
+    } else {
+      throw Exception("No costs for $pair");
+    }
+  });
+}
+
+int factorial(int number) {
+  return List<int>.generate(number, (index) => index + 1)
+      .fold(1, (value, element) => value * element);
+}
