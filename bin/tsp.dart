@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:tsp/citykey.dart';
 import 'package:tsp/permutations.dart';
-import 'package:tsp/tsp.dart' as tsp;
+import 'package:tsp/util.dart';
 
-void main(List<String> arguments) {}
+void main(List<String> arguments) {
+  final costs = loadCostsFromFile("cities.txt");
+  print(costs.isEmpty);
+}

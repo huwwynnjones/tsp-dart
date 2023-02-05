@@ -9,4 +9,9 @@ class CityKey {
 
   @override
   int get hashCode => start.hashCode + end.hashCode;
+
+  @override
+  String toString() {
+    return "$start, $end";
+  }
 }
