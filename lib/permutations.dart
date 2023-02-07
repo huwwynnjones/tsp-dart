@@ -14,7 +14,7 @@ class Permutation<T> implements Iterator<List<T>> {
   }
 
   @override
-  List<T> get current => UnmodifiableListView(_a);
+  List<T> get current => List.from(_a);
 
   @override
   bool moveNext() {

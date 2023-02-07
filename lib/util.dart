@@ -5,7 +5,7 @@ import 'package:tsp/citykey.dart';
 import 'package:tsp/mapentry.dart';
 
 Map<CityKey, int> loadCostsFromFile(String filename) {
-  final file = File("cities.txt");
+  final file = File(filename);
   return file.readAsLinesSync().fold(<CityKey, int>{}, (costs, line) {
     final mapEntry = MapEntry.from(line);
     costs[mapEntry.key] = mapEntry.cost;

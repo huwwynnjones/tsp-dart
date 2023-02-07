@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:tsp/citykey.dart';
 import 'package:tsp/permutations.dart';
 import 'package:tsp/util.dart';
 
