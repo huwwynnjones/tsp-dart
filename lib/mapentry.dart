@@ -7,9 +7,9 @@ class MapEntry {
   MapEntry(this.key, this.cost);
 
   factory MapEntry.from(String input) {
-    var items = input.split(" ");
-    var key = CityKey(items[0], items[1]);
-    var cost = int.parse(items[2]);
+    final items = input.split(" ");
+    final key = CityKey(items[0], items[1]);
+    final cost = int.parse(items[2]);
     return MapEntry(key, cost);
   }
 
